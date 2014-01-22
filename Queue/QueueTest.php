@@ -16,8 +16,6 @@ class QueueTest extends \PHPUnit_Framework_TestCase {
     
     public function testExecute()
     {
-        require 'vendor/autoload.php';
-        
         $task1 = new Task('Task 1');
         $task2 = new Task('Task 2');
         $task3 = new Task('Task 3');
@@ -25,11 +23,9 @@ class QueueTest extends \PHPUnit_Framework_TestCase {
         $queue = new Queue();
         $queue->add(array($task1, $task2, $task3));
 
-        $resutl = $queue->execute();
+        $resutlt = $queue->execute();
 
-
-        $this->assertEquals('task 1 executed', $resutl);
-        
+        $this->assertEquals('task 1 executed', $resutlt);        
         $this->assertEquals(2, $queue->count());
         
         
