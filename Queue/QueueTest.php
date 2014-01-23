@@ -9,10 +9,12 @@
  * file that was distributed with this source code.
  */
 
-require_once 'Task.php';
-require_once 'Queue.php';
+require_once 'vendor/autoload.php';
 
-class QueueTest extends \PHPUnit_Framework_TestCase {
+use OOPWithSPL\Queue\Queue;
+use OOPWithSPL\Queue\Task;
+
+class QueueTest extends PHPUnit_Framework_TestCase {
     
     public function testExecute()
     {

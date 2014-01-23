@@ -3,7 +3,7 @@
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
-        "psr-0": {"OOPWithSPL\\Queue\\": "Queue/"}
+        "psr-4": {"OOPWithSPL\\Queue\\": "Queue/"}
     }
 
 }
