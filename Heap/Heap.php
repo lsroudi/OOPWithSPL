@@ -15,7 +15,15 @@ class Heap extends \SplHeap {
 
     protected function compare($value1, $value2)
     {
-        return $value1 - $value2;
+        return $value1['note'] - $value2['note'];
+    }
+
+    public function display()
+    {
+        foreach ($this as $h)
+        {
+            print(sprintf('le candidat %s à la note de %d '. '<br/>', $h['name'], $h['note']));
+        }
     }
 
 }
