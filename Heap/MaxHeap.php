@@ -15,7 +15,7 @@ class MaxHeap extends \SplMaxHeap {
 
     protected function compare($value1, $value2)
     {
-        
+        $value1['note'] - $value2['note'];
     }
 
 }
