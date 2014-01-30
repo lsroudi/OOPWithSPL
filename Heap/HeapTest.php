@@ -36,9 +36,14 @@ class HeapTest extends \PHPUnit_Framework_TestCase {
         $maxheap = new MaxHeap();
         $maxheap->insert('b');
         $maxheap->insert('c');
+        $maxheap->insert('z');
         $maxheap->insert('a');
+        $maxheap->insert('e');
         $maxheap->insert('d');
 
+
+        $this->assertEquals('z', $maxheap->extract());
+        $this->assertEquals('e', $maxheap->extract());
         $this->assertEquals('d', $maxheap->extract());
         $this->assertEquals('c', $maxheap->extract());
         $this->assertEquals('b', $maxheap->extract());
