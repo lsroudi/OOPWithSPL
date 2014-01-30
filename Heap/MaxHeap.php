@@ -12,12 +12,24 @@
 namespace OOPWithSPL\Heap;
 
 class MaxHeap extends \SplMaxHeap {
-
-    protected function compare($value1, $value2)
-    {
-        return strcmp( $value1,$value2 ); 
-    }
-
+    
+    /**
+     * MaxSplHeap is simply a SplHeap with an implemented compare method 
+     * where the highest element is always in the top of the list
+     */
 }
+
+//Example
+//$maxheap = new MaxHeap();
+//$maxheap->insert('b');
+//$maxheap->insert('c');
+//$maxheap->insert('a');
+//$maxheap->insert('d');
+//
+//foreach ($maxheap as $char)
+//{
+//    print $char . PHP_EOL;
+//}
+// d c b a
 ?>
 

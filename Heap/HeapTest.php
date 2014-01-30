@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 require_once 'vendor/autoload.php';
 
 use OOPWithSPL\Heap\Heap;
+use OOPWithSPL\Heap\MaxHeap;
 
 class HeapTest extends \PHPUnit_Framework_TestCase {
 
@@ -29,6 +29,20 @@ class HeapTest extends \PHPUnit_Framework_TestCase {
         $this->assertEquals(array('name' => 'abdel', 'note' => 15), $heap->extract());
         $this->assertEquals(array('name' => 'chantal', 'note' => 11), $heap->extract());
         $this->assertEquals(array('name' => 'joseph', 'note' => 10), $heap->extract());
+    }
+
+    public function testMaxHeap()
+    {
+        $maxheap = new MaxHeap();
+        $maxheap->insert('b');
+        $maxheap->insert('c');
+        $maxheap->insert('a');
+        $maxheap->insert('d');
+
+        $this->assertEquals('d', $maxheap->extract());
+        $this->assertEquals('c', $maxheap->extract());
+        $this->assertEquals('b', $maxheap->extract());
+        $this->assertEquals('a', $maxheap->extract());
     }
 
 }
