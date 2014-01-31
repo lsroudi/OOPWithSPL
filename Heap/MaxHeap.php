@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of Heap
+ * Description of MaxHeap
  *
  * (c) lsroudi <http://lsroudi.com/> <lsroudi@gmail.com>
  * 
