@@ -11,7 +11,7 @@
 
 namespace OOPWithSPL\Heap;
 
-class MinHeap extends \SplMaxHeap {
+class MinHeap extends \SplMinHeap {
     
     
 }

@@ -12,6 +12,7 @@ require_once 'vendor/autoload.php';
 
 use OOPWithSPL\Heap\Heap;
 use OOPWithSPL\Heap\MaxHeap;
+use OOPWithSPL\Heap\MinHeap;
 
 class HeapTest extends \PHPUnit_Framework_TestCase {
 
@@ -48,6 +49,25 @@ class HeapTest extends \PHPUnit_Framework_TestCase {
         $this->assertEquals('c', $maxheap->extract());
         $this->assertEquals('b', $maxheap->extract());
         $this->assertEquals('a', $maxheap->extract());
+    }
+
+    public function testMinHeap()
+    {
+        $minheap = new MinHeap();
+        $minheap->insert('b');
+        $minheap->insert('c');
+        $minheap->insert('z');
+        $minheap->insert('a');
+        $minheap->insert('e');
+        $minheap->insert('d');
+
+
+        $this->assertEquals('a', $minheap->extract());
+        $this->assertEquals('b', $minheap->extract());
+        $this->assertEquals('c', $minheap->extract());
+        $this->assertEquals('d', $minheap->extract());
+        $this->assertEquals('e', $minheap->extract());
+        $this->assertEquals('z', $minheap->extract());
     }
 
 }
