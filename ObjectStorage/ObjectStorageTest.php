@@ -24,8 +24,10 @@ class ObjectStorageTest extends \PHPUnit_Framework_TestCase {
         $ObjectStorage->attach($obj2);
 
         $this->assertEquals(2, $ObjectStorage->count());
+
         $ObjectStorage->detach($obj2);        
         $this->assertFalse($ObjectStorage->contains($obj2));       
+
     }
 
 }
