@@ -10,7 +10,7 @@
  */
 namespace OOPWithSPL\Iterator;
 
-class AlphabetIterator implements Iterator {
+class AlphabetIterator implements \Iterator {
 
     protected $current;
     protected $key;
