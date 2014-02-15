@@ -8,8 +8,22 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-class Directory {
-    //put your code here
+class Dir {
+
+    public function __construct()
+    {
+        $append = new AppendIterator();
+        $append->append(new DirectoryIterator('./Fixture/dir1'));
+        $append->append(new DirectoryIterator('./Fixture/dir2'));
+
+        foreach ($append as $item)
+        {
+            echo $item . PHP_EOL;
+        }
+    }
+
 }
+
+new Dir();
 ?>
 
