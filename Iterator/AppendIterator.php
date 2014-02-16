@@ -8,13 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-class Dir {
+namespace OOPWithSPL\Iterator;
+
+class AppendIterator {
 
     public function __construct()
     {
-        $append = new AppendIterator();
-        $append->append(new DirectoryIterator('./Fixture/dir1'));
-        $append->append(new DirectoryIterator('./Fixture/dir2'));
+        $append = new \AppendIterator();
+        $append->append(new \DirectoryIterator('./Fixture/dir1'));
+        $append->append(new \DirectoryIterator('./Fixture/dir2'));
 
         foreach ($append as $item)
         {
@@ -24,6 +26,6 @@ class Dir {
 
 }
 
-new Dir();
+new AppendIterator;
 ?>
 
