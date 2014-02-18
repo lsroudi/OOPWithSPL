@@ -18,6 +18,10 @@ class ArrayIteratorTest extends \PHPUnit_Framework_TestCase {
     {
         $it = new ArrayIterator();
         $it['test1'] = 'value1';
+        $it['test2'] = 'value2';
+        
+        $this->assertEquals(2, $it->count());
+        $this->assertEquals(array('test1'=>'value1','test2'=>'value2'), $it->getArrayCopy());
     }
 
 }
