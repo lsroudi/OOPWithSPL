@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OOPWithSPL\Iterator;
+namespace OOPSPL\Iterator\ArrayIterator;
 
 class ArrayIterator extends \ArrayIterator {
     

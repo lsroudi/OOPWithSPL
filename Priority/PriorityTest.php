@@ -11,8 +11,8 @@
 
 require_once 'vendor/autoload.php';
 
-use OOPWithSPL\Priority\PriorityLogger;
-use OOPWithSPL\Priority\Logger;
+use OOPSPL\Priority\PriorityLogger;
+use OOPSPL\Priority\Logger;
 
 class PriorityTest extends PHPUnit_Framework_TestCase {
 

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace OOPWithSPL\Iterator;
+namespace OOPSPL\Iterator;
 
-use OOPWithSPL\Iterator\AlphabetIterator;
+use OOPSPL\Iterator\AlphabetIterator;
 
 class FilterAlphabet extends \FilterIterator {
 

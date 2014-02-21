@@ -10,9 +10,9 @@
  */
 require_once 'vendor/autoload.php';
 
-use OOPWithSPL\Heap\Heap;
-use OOPWithSPL\Heap\MaxHeap;
-use OOPWithSPL\Heap\MinHeap;
+use OOPSPL\Heap\Heap;
+use OOPSPL\Heap\MaxHeap;
+use OOPSPL\Heap\MinHeap;
 
 class HeapTest extends \PHPUnit_Framework_TestCase {
 

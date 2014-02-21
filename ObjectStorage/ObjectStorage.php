@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OOPWithSPL\ObjectStorage;
+namespace OOPSPL\ObjectStorage;
 
 class ObjectStorage extends \SplObjectStorage {
     //put your code here

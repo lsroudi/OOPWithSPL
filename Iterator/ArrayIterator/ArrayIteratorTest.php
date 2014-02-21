@@ -10,7 +10,7 @@
  */
 require 'vendor/autoload.php';
 
-use OOPWithSPL\Iterator\ArrayIterator;
+use OOPSPL\Iterator\ArrayIterator\ArrayIterator;
 
 class ArrayIteratorTest extends \PHPUnit_Framework_TestCase {
 

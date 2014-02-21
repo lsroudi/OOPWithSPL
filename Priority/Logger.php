@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace OOPWithSPL\Priority;
+namespace OOPSPL\Priority;
 
-use OOPWithSPL\Priority\PriorityLoggerInterface;
+use OOPSPL\Priority\PriorityLoggerInterface;
 
 class Logger {
 

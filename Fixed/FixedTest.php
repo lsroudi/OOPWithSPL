@@ -10,7 +10,7 @@
  */
 require 'vendor/autoload.php';
 
-use OOPWithSPL\Fixed\FixedArray;
+use OOPSPL\Fixed\FixedArray;
 
 class FixedTest extends \PHPUnit_Framework_TestCase {
 

@@ -11,8 +11,8 @@
 
 require_once 'vendor/autoload.php';
 
-use OOPWithSPL\Queue\Queue;
-use OOPWithSPL\Queue\Task;
+use OOPSPL\Queue\Queue;
+use OOPSPL\Queue\Task;
 
 class QueueTest extends PHPUnit_Framework_TestCase {
     

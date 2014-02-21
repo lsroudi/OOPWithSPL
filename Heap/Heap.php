@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OOPWithSPL\Heap;
+namespace OOPSPL\Heap;
 
 class Heap extends \SplHeap {
 

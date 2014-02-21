@@ -10,7 +10,7 @@
  */
 require 'vendor/autoload.php';
 
-use OOPWithSPL\ObjectStorage\ObjectStorage;
+use OOPSPL\ObjectStorage\ObjectStorage;
 
 class ObjectStorageTest extends \PHPUnit_Framework_TestCase {
 

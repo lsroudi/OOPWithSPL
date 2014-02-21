@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace OOPWithSPL\Fixed;
+namespace OOPSPL\Fixed;
 
 class FixedArray extends \SplFixedArray {
     //put your code here
