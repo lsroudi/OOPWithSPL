@@ -12,7 +12,12 @@
 namespace OOPSPL\Iterator\ArrayIterator;
 
 class ArrayIterator extends \ArrayIterator {
-    
+
+    public function __construct($array = 'array()', $flags = 0)
+    {
+        parent::__construct($array, $flags);
+    }
+
 }
 ?>
 
