@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of ArrayIteratorTest
+ * Description of CachingIteratorTest
  *
  * (c) lsroudi <http://lsroudi.com/> <lsroudi@gmail.com>
  * 
@@ -10,22 +10,26 @@
  */
 require 'vendor/autoload.php';
 
-use OOPSPL\Iterator\ArrayIterator\ArrayIterator;
+use OOPSPL\Iterator\Caching\CachingIterator;
 
-class ArrayIteratorTest extends \PHPUnit_Framework_TestCase {
+class CachingIteratorTest extends \PHPUnit_Framework_TestCase {
 
     public function testArrayIterator()
     {
-        $it = new ArrayIterator();
-        $it['test1'] = 'value1';
-        $it['test2'] = 'value2';
+        $it = new CachingIterator();
+        $it->generateRangeNumber(1, 3);
+
+        $this->assertEquals(3, $it->getRangeNumberIterator()->count());
         
-        $this->assertEquals(2, $it->count());
-        $this->assertEquals(array('test1'=>'value1','test2'=>'value2'), $it->getArrayCopy());
+        $it->addIteratorToCache($it->getRangeNumberIterator());
+        $ci = $it->getCachingArrayIterator();
         
-        $it2 = new ArrayIterator(range(1, 10));
-        $this->assertEquals(10, $it2->count()); 
-        $this->assertEquals(3, $it2[2]);
+        foreach ($ci as $v)
+        {
+            if (!$ci->hasNext()){
+                $this->assertEquals(NULL, $ci->next());
+            }
+        }
     }
 
 }
